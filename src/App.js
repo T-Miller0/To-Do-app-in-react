@@ -17,6 +17,15 @@ addItem = () => {
   console.log('Hello Add Item')
 }
 
+deleteItem = key => {
+    const filteredItems = this.state.items.filter(item => {
+      return item.key !== key
+    })
+    this.setState({
+      items: filteredItems,
+    })
+  }
+
   render() {
     return (
       <div className="App">
